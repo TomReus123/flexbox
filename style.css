@@ -1,0 +1,77 @@
+body{
+	font-family: sans-serif;
+	margin: 0;
+}
+
+header{
+	background-color: white;
+	color: orange;
+	font-size: 75px;
+	text-align: center;
+}
+header a:link{
+	font-size: 15px;
+	text-decoration: none;
+}
+header a:hover{
+	text-decoration: underline;
+}
+header h1{
+	margin: 0;
+	padding: 1rem;
+}
+
+aside{
+	padding: 1em;
+	background-color: orange;
+}
+
+article{
+	text-align: center;
+	padding: 1em;	
+	background-color: #ccc;
+}
+
+footer{
+	padding: 1.3em;
+	color: white;
+	text-align: center;
+	background-color: #222222;
+}
+
+/* hier komt mobiele versie: */
+main{
+	display: flex;
+	flex-direction: column;
+}
+aside{
+	order: 1;
+}
+
+/* Vanaf 26 em */
+@media screen and (min-width: 26em){
+	main{
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	article{
+		width: 100%;
+	}
+	aside{
+		flex: 1;
+	}	
+}
+
+/* Vanaf 36 em */
+@media screen and (min-width: 36em){
+	main{
+		flex-wrap: nowrap;
+	}
+	article{
+		width: auto;
+		flex: 3;
+	}
+	aside{
+		order: 0;
+	}
+}
